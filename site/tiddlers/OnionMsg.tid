@@ -1,0 +1,11 @@
+created: 20250820164558269
+github: https://github.com/craumix/onionmsg
+modified: 20250830132754958
+short: OnionMsg is a peer to peer, anonymous and secure messenger over the Tor Network.
+tags: Golang Project
+title: OnionMsg
+type: text/vnd.tiddlywiki
+
+{{!!short}}
+
+<a href={{!!github}}>The source code is available on GitHub</a>

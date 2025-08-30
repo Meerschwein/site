@@ -1,0 +1,10 @@
+created: 20250830132929531
+modified: 20250830133114036
+title: Projects
+type: text/vnd.tiddlywiki
+
+<$list filter="[tag[Project]]">
+
+* <$link/>: {{!!short}}
+
+</$list>

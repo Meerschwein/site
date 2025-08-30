@@ -1,0 +1,32 @@
+created: 20250820163739691
+github: https://github.com/Meerschwein/gochange
+modified: 20250830132715807
+short: A refactoring tool for Golang that replaces concrete data types in function arguments with source code compatible interfaces.
+tags: Project Golang
+title: GoChange
+type: text/vnd.tiddlywiki
+
+{{!!short}}
+
+<a href={{!!github}}>The source code is available on GitHub</a>
+
+---
+
+When a parameter is forwarded to another function expecting an interface, we can infer a simpler signature:
+
+```go
+func do(buf *bytes.Buffer) { buf.Write([]byte("Hi")) }
+```
+
+Since `do` only needs the argument to have a `Write` method we can refactor this to the following:
+
+```go
+func do(buf interface{Write([]byte) (int, error)}) { buf.Write([]byte("Hi")) }
+```
+
+but since the standard library already contains and interface like this we can just use it:
+
+```go
+func do(buf io.Writer) { buf.Write([]byte("Hi")) }
+```
+This refactoring keeps all usages of the function intact, as the concrete type `*bytes.Buffer` is still a valid argument for the new function signature.
