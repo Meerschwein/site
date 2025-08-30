@@ -4,5 +4,6 @@ in
   pkgs.mkShell {
     packages = with pkgs; [
       nodePackages.tiddlywiki
+      jq
     ];
   }
