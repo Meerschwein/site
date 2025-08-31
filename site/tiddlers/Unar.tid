@@ -1,0 +1,31 @@
+created: 20250831143612665
+github: https://github.com/meerschwein/unar
+modified: 20250831144658205
+short: A simple unpacker for most archive formats.
+tags: Project Golang
+title: Unar
+type: text/vnd.tiddlywiki
+
+{{!!short}}
+
+<a href={{!!github}}>The source code is available on GitHub</a>
+
+---
+
+During my explorations of interesting things on the internet I often download archives and have to unpack them.
+Unfortunately the commands for each archive format vary wildly and so I always have to consult the manual (or AI).
+
+```sh
+unzip your_file.zip -d your_file
+tar -xzf your_file.tar.gz -C your_file
+unrar x your_file.rar your_file
+```
+
+And with unar:
+
+```sh
+unar your_file.zip
+unar your_file.tar.gz
+unar your_file.rar
+```
+
