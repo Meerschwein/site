@@ -1,3 +1,3 @@
 #! /usr/bin/env sh
 
-tiddlywiki ./site --listen
+tiddlywiki --listen

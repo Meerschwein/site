@@ -1,7 +1,7 @@
 #! /usr/bin/env sh
 
-jq 'del(.plugins[] | select(. == "tiddlywiki/filesystem" or . == "tiddlywiki/tiddlyweb"))' site/tiddlywiki.info >site/tiddlywiki.info.tmp
+jq 'del(.plugins[] | select(. == "tiddlywiki/filesystem" or . == "tiddlywiki/tiddlyweb"))' tiddlywiki.info >tiddlywiki.info.tmp
 
-mv site/tiddlywiki.info.tmp site/tiddlywiki.info
+mv tiddlywiki.info.tmp tiddlywiki.info
 
-tiddlywiki ./site --output ./out --build index
+tiddlywiki --output ./out --build index
