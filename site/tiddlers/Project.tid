@@ -1,6 +1,8 @@
+caption: Projects
 created: 20250830132929531
-modified: 20250830133114036
-title: Projects
+modified: 20250906142800869
+tags: [[Table of Contents]]
+title: Project
 type: text/vnd.tiddlywiki
 
 <$list filter="[tag[Project]]">
